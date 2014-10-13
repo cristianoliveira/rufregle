@@ -1,16 +1,8 @@
 require 'test/unit'
-require 'hola'
+require 'rufregle'
 
-class HolaTest < Test::Unit::TestCase
+class RufregleTest < Test::Unit::TestCase
   def test_english_hello
-    assert_equal "hello world", Hola.hi("english")
-  end
-
-  def test_any_hello
-    assert_equal "hello world", Hola.hi("ruby")
-  end
-
-  def test_spanish_hello
-    assert_equal "hola mundo", Hola.hi("spanish")
+    assert_equal "Olá", Rufregle.translate("Hello","en","pt")[0][0]
   end
 end

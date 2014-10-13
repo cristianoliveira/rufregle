@@ -1,8 +1,0 @@
-"URL http://translate.google.com/translate_a/t?client=t&text=Hello&hl=en&sl=en&tl=pt&ie=UTF-8&oe=UTF-8&multires=1&otf=1&ssel=3&tsel=3&sc=1"
-"RESULT [[[\"Ol\xC3\xA1\",\"Hello\",\"\",\"\"]],[[\"interjection\",[\"Ol\xC3\xA1!\",\"Oi!\",\"Al\xC3\xB4!\"],[[\"Ol\xC3\xA1!\",[\"Hello!\",\"Hi!\",\"Hoy!\"],,0.43686765],[\"Oi!\",[\"Hi!\",\"Hello!\"],,0.022092877],[\"Al\xC3\xB4!\",[\"Hello!\",\"Hallo!\"],,0.013400008]],\"Hello!\",9]],\"en\",,[[\"Ol\xC3\xA1\",[1],true,false,1000,0,1,0]],[[\"Hello\",1,[[\"Ol\xC3\xA1\",1000,true,false]],[[0,5]],\"Hello\"]],,,[],3]"
-"RESULT RESULT [[[\"Ol\xC3\xA1\",\"Hello\",\"\",\"\"]],[[\"interjection\",[\"Ol\xC3\xA1!\",\"Oi!\",\"Al\xC3\xB4!\"],[[\"Ol\xC3\xA1!\",[\"Hello!\",\"Hi!\",\"Hoy!\"],,0.43686765],[\"Oi!\",[\"Hi!\",\"Hello!\"],,0.022092877],[\"Al\xC3\xB4!\",[\"Hello!\",\"Hallo!\"],,0.013400008]],\"Hello!\",9]],\"en\",,[[\"Ol\xC3\xA1\",[1],true,false,1000,0,1,0]],[[\"Hello\",1,[[\"Ol\xC3\xA1\",1000,true,false]],[[0,5]],\"Hello\"]],,,[],3]"
-"URL http://translate.google.com/translate_a/t?client=t&text=Hello&hl=en&sl=en&tl=pt&ie=UTF-8&oe=UTF-8&multires=1&otf=1&ssel=3&tsel=3&sc=1"
-"RESULT [[[\"Ol\xC3\xA1\",\"Hello\",\"\",\""
-"RESULT RESULT [[[\"Ol\xC3\xA1\",\"Hello\",\"\",\""
-"URL http://translate.google.com/translate_a/t?client=t&text=Hello%20world&hl=en&sl=en&tl=pt&ie=UTF-8&oe=UTF-8&multires=1&otf=1&ssel=3&tsel=3&sc=1"
-"AA [\"\", \"\", \"\", \"\\\"Ol\\xC3\\xA1, mundo\\\",\\\"Hello world\\\",\\\"\\\",\\\"\\\"]],,\\\"en\\\",,\", \"\", \"\\\"Ol\\xC3\\xA1, mundo\\\",\", \"1],true,false,916,0,3,0]],\", \"\", \"\\\"Hello world\\\",1,\", \"\", \"\\\"Ol\\xC3\\xA1, mundo\\\",916,true,false],\", \"\\\"Ol\\xC3\\xA1 mundo\\\",0,true,false]],\", \"\", \"0,11]],\\\"Hello world\\\"]],,,\", \"\", \"\\\"en\\\"]],1]\"]"
