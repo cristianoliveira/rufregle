@@ -1,7 +1,9 @@
-rufregle-translate
+Rufregle
 ==================
+Ruby Free Google Translate API or Rufregle
 
 Simple unoficial free google translate gem.
+Easy install and use.
 
 More simple than that? 
 
