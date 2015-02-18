@@ -1,0 +1,3 @@
+deploy:
+  provider: rubygems
+  api_key: "23d97812d6f00a43c13d6f2f731afaf0."

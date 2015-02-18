@@ -1,5 +1,7 @@
 Rufregle
 ==================
+[![Version         ](http://img.shields.io/gem/v/rufregle.svg)                               ](https://rubygems.org/gems/rufregle)[![Build Status](https://travis-ci.org/CristianOliveiraDaRosa/rufregle.svg)](https://travis-ci.org/CristianOliveiraDaRosa/rufregle)
+---
 Ruby Free Google Translate gem or Rufregle
 
 Simple unofficial free google translate library.
@@ -23,19 +25,29 @@ More simple than that?
 
 Installing gem
 ```
- gem install rufregle
- 
+$  gem install rufregle
+
 ```
 
 Using on code:
 ```
-    result = Rufregle.translate("Hello World", "en", "pt")
-    p "#{result[0]}"
+result = Rufregle.new.translate("Hello World", "en", "pt")
+p "#{result}"
 ```
+
+Contributing
+===
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request
+
+After that include your name in "Autors" section!
 
 License
 ====
-  This project was made under MIT licence
+  This project is under MIT licence
 
 Authors
 =====
