@@ -24,7 +24,7 @@ class RufregleTest < Test::Unit::TestCase
     r = Rufregle.new
     translate = r.translate("That is cached", :en, :pt)
     r.clean_cache
-    assert_true(r.get_cached_translate.empty?)
+    assert_equal(true, r.get_cached_translate.empty?)
   end
 
   def test_static_call

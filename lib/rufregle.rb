@@ -23,7 +23,7 @@ class Rufregle
     text_encoded   = URI::encode(text_to_translate)
 
     parameters   = GOOGLE_PARAMS % [ text_encoded , language_from, language_from, language_to ]
-    url      = GOOGLE_URL_API + parameters
+    url          = GOOGLE_URL_API + parameters
 
     raw_data     = Net::HTTP.get(URI.parse(url))
 
