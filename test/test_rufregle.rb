@@ -1,3 +1,6 @@
+#!/bin/env ruby
+# encoding: utf-8
+
 require 'test/unit'
 require './lib/rufregle.rb'
 
