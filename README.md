@@ -1,52 +1,43 @@
 Rufregle
 ==================
-Ruby Free Google Translate API or Rufregle
+Ruby Free Google Translate gem or Rufregle
 
-Simple unoficial free google translate gem.
-Easy install and use.
+Simple unofficial free google translate library.
 
-More simple than that? 
+#How it works?
 
-Install and Run
-====
+It uses an alternative google url to request the translate that's why this lib may have performance issues.
+Recommended to use only in prototypes applications.
 
-Tested only in Ruby version 2.1.2
+###Is it free?
+
+Yes.
+
+###Should I use it in my Production Application?
+
+Maybe. You need performance?
+
+
+#Using
+More simple than that?
 
 Installing gem
 ```
  gem install rufregle
+ 
 ```
 
 Using on code:
 ```
     result = Rufregle.translate("Hello World", "en", "pt")
-    p "#{result[0]}"	
+    p "#{result[0]}"
 ```
 
 License
 ====
-  Copyright (c) 2010-2014 Primous Soluções Inteligentes. http://primous.com.br
+  This project was made under MIT licence
 
-	Permission is hereby granted, free of charge, to any person obtaining a copy
-	of this software and associated documentation files (the "Software"), to deal
-	in the Software without restriction, including without limitation the rights
-	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-	copies of the Software, and to permit persons to whom the Software is
-	furnished to do so, subject to the following conditions:
-
-	The above copyright notice and this permission notice shall be included in
-	all copies or substantial portions of the Software.
-
-	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-	THE SOFTWARE.
- 
 Authors
-===== 
+=====
 
 Cristian Oliveira - www.cristianoliveira.com.br
-
