@@ -43,7 +43,7 @@ Contributing
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request
 
-After that include your name in "Autors" section!
+After that include your name in "Authors" section!
 
 License
 ====
