@@ -3,32 +3,59 @@
 
 require 'test/unit'
 require './lib/rufregle.rb'
+require './lib/translators/free_google_translator.rb'
 
 class RufregleTest < Test::Unit::TestCase
 
   def test_english_to_portuguese_hello
-    assert_equal("Olá", Rufregle.new.translate("Hello", :en , :pt))
+    #given
+    word = "Hello"
+    expected = "Olá"
+
+    #when
+    result = Rufregle.new.translate(word, :en , :pt)
+
+    #then
+    assert_equal(expected, result[:translated])
+  end
+
+  def test_english_to_portuguese_hello_get_original
+    #given
+    word = "Hello"
+    expected = "Hello"
+
+    #when
+    result = Rufregle.new.translate(expected, :en , :pt)
+
+    #then
+    assert_equal(expected, result[:original])
   end
 
   def test_prhase_translate
-    assert_equal("This is a translated phrase", Rufregle.new.translate('Isso é uma frase traduzida', :pt, :en))
+    #given
+    phrase = "Isso é uma frase traduzida"
+    expected = "This is a translated phrase"
+
+    #when
+    result = Rufregle.new.translate(phrase, :pt, :en)
+
+    #then
+    assert_equal(expected, result[:translated])
   end
 
-  def test_cached_translate
-    r = Rufregle.new
-    translate = r.translate("That is cached", :en, :pt)
-    assert_equal(translate, r.get_cached_translate.last)
-  end
+  def test_given_new_translator
+    #given
+    phrase = "Isso é uma frase traduzida"
+    expected = "This is a translated phrase"
+    translator = FreeGoogleTranslator.new
+    rufregle = Rufregle.new
 
-  def test_clean_cache
-    r = Rufregle.new
-    translate = r.translate("That is cached", :en, :pt)
-    r.clean_cache
-    assert_equal(true, r.get_cached_translate.empty?)
-  end
+    #when
+    rufregle.translator = translator
+    result = rufregle.translate(phrase, :pt, :en)
 
-  def test_static_call
-    assert_equal("static call", Rufregle::translate('chamada estática', :pt, :en))
+    #then
+    assert_equal(expected, result[:translated])
   end
 
   def test_invalid_params
