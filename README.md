@@ -32,7 +32,7 @@ $  gem install rufregle
 Using on code:
 ```
 result = Rufregle.new.translate("Hello World", "en", "pt")
-p "#{result}"
+p "#{result[:translated]}"
 ```
 
 Contributing
