@@ -35,6 +35,23 @@ result = Rufregle.new.translate("Hello World", "en", "pt")
 p "#{result[:translated]}"
 ```
 
+# Tests
+Runing all tests
+
+```
+rake test
+```
+
+### Integration
+```
+rake integration_test
+```
+
+### Unit Tests
+```
+rake integration_test
+```
+
 Contributing
 ===
 1. Fork it!
@@ -44,6 +61,8 @@ Contributing
 5. Submit a pull request
 
 After that include your name in "Authors" section!
+
+** Pull Request should have unit tests **
 
 License
 ====
