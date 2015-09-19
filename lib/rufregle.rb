@@ -1,28 +1,19 @@
-require './lib/translators/free_google_translator.rb'
+require_relative 'translators/free_google_translator'
 
 class Rufregle
+  attr_writer :translator
 
-  @translator
-
-  def translator=(translator)
-    @translator = translator
-  end
-
-  def translate(text, from_language, to_language)
-
-    validate_params([text, from_language, to_language])
-    translator.do_translate text, from_language, to_language
-
+  def translate(text, from, to)
+    raise 'Rufregle: All params must be informed' if empty?([text, from, to])
+    translator.do_translate(text, from, to)
   end
 
   private
   def translator
-    @@translator ||= FreeGoogleTranslator.new
+    @translator || FreeGoogleTranslator.new
   end
 
-  def validate_params(params)
-    if !params.map{ |p| p.nil? || p.empty? }
-     raise 'Rufregle: All params must be informed'
-    end
+  def empty?(params)
+    !params.map{ |p| p.nil? || p.empty? }
   end
 end
