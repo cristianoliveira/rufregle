@@ -2,10 +2,10 @@ require './lib/translators/free_google_translator.rb'
 
 class Rufregle
 
-  @@translator
+  @translator
 
   def translator=(translator)
-    @@translator = translator
+    @translator = translator
   end
 
   def translate(text, from_language, to_language)
