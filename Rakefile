@@ -1,7 +1,7 @@
 require 'rake/testtask'
 
-UNIT_TEST_PATTERN = 'test/unit/*_test.rb'
-INTEGRATION_TEST_PATTERN = 'test/integration/*_test.rb'
+UNIT_TEST_PATTERN = 'test/unit/**/*_test.rb'
+INTEGRATION_TEST_PATTERN = 'test/integration/**/*_test.rb'
 
 Rake::TestTask.new(:test) do |t|
   t.test_files = FileList[UNIT_TEST_PATTERN, INTEGRATION_TEST_PATTERN]

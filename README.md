@@ -1,7 +1,6 @@
 Rufregle
-==================
-[![Version         ](http://img.shields.io/gem/v/rufregle.svg)                               ](https://rubygems.org/gems/rufregle)[![Build Status](https://travis-ci.org/CristianOliveiraDaRosa/rufregle.svg)](https://travis-ci.org/CristianOliveiraDaRosa/rufregle)
----
+[![Version](http://img.shields.io/gem/v/rufregle.svg)](https://rubygems.org/gems/rufregle)[![Build Status](https://travis-ci.org/CristianOliveiraDaRosa/rufregle.svg)](https://travis-ci.org/CristianOliveiraDaRosa/rufregle)
+
 Ruby Free Google Translate gem or Rufregle
 
 Simple unofficial free google translate library.

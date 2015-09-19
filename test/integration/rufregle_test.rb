@@ -2,8 +2,8 @@
 # encoding: utf-8
 
 require 'test/unit'
-require './lib/rufregle.rb'
-require './lib/translators/free_google_translator.rb'
+require_relative '../../lib/rufregle.rb'
+require_relative '../../lib/translators/free_google/factory.rb'
 
 class RufregleTest < Test::Unit::TestCase
 
@@ -47,7 +47,7 @@ class RufregleTest < Test::Unit::TestCase
     #given
     phrase = "Isso é uma frase traduzida"
     expected = "This is a translated phrase"
-    translator = FreeGoogleTranslator.new
+    translator = FreeGoogle::Factory.create()
     rufregle = Rufregle.new
 
     #when
@@ -58,17 +58,5 @@ class RufregleTest < Test::Unit::TestCase
     assert_equal(expected, result[:translated])
   end
 
-  def test_invalid_params
-    r = Rufregle.new
-
-    assert_raise do #doing it must to raise
-      empty_var = ''
-      r.translate(nil, nil, nil)
-      r.translate(empty_var, empty_var, "#{empty_var}")
-      r.translate('All paramns must be informed', nil, nil)
-      r.translate('All paramns must be informed', :pt, nil)
-    end
-
-  end
 
 end
