@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'rufregle'
-  s.version     = '1.0.2'
+  s.version     = '2.0.0'
   s.date        = '2015-04-17'
   s.summary     = "Free google translate!"
   s.description = "Simple Free google translate."
