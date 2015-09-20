@@ -11,10 +11,10 @@ class RufregleTest < Test::Unit::TestCase
   end
 
   def test_it_should_raise_error
-    assert_raise { @rufregle.translate(nil, nil, nil) }
-    assert_raise { @rufregle.translate("", "", "") }
-    assert_raise { @rufregle.translate("aaa", "", "") }
-    assert_raise { @rufregle.translate("aaa", "aaa", "") }
+    assert_raise RuntimeError do @rufregle.translate(nil, nil, nil) end
+    assert_raise RuntimeError do @rufregle.translate("", "", "") end
+    assert_raise RuntimeError do @rufregle.translate("aaa", "", "") end
+    assert_raise RuntimeError do @rufregle.translate("aaa", "aaa", "") end
   end
 
   def test_it_should_not_raise_error

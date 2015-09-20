@@ -29,6 +29,7 @@ class Rufregle
   end
 
   def all_present?(params)
-    !params.map{|val| val.nil? || val.empty? }.reduce{|pre,nex| pre or nex }
+    params.each {|val| return false if val.nil? || val.empty? }
+    return true
   end
 end
