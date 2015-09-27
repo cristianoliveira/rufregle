@@ -1,6 +1,5 @@
 require 'test/unit'
 require_relative '../../lib/rufregle'
-require_relative '../../lib/rufregle'
 
 class RufregleTest < Test::Unit::TestCase
 
@@ -10,27 +9,28 @@ class RufregleTest < Test::Unit::TestCase
     @rufregle.translator = @translator
   end
 
-  def test_it_should_raise_error
-    assert_raise RuntimeError do @rufregle.translate(nil, nil, nil) end
-    assert_raise RuntimeError do @rufregle.translate("", "", "") end
-    assert_raise RuntimeError do @rufregle.translate("aaa", "", "") end
-    assert_raise RuntimeError do @rufregle.translate("aaa", "aaa", "") end
+  def test_it_should_return_fail_message
+    fail_message = 'Rufregle: All params must be informed'
+    assert_equal fail_message, @rufregle.translate(nil, nil, nil)
+    assert_equal fail_message, @rufregle.translate('', '', '')
+    assert_equal fail_message, @rufregle.translate('aaa', '', '')
+    assert_equal fail_message, @rufregle.translate('aaa', 'aaa', '')
   end
 
   def test_it_should_not_raise_error
     # given
-    translation = "Text translated"
+    translation = 'Text translated'
     @translator.result = translation
 
     # then
-    assert_equal translation, @rufregle.translate("aaa", "aaa", "aaa")
+    assert_equal translation, @rufregle.translate('aaa', 'aaa', 'aaa')
   end
 
   class StubedTranslator
     attr_accessor :result
 
-    def translate(text, from, to)
-      return @result
+    def translate(_text, _from, _to)
+      @result
     end
   end
 end

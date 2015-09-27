@@ -49,7 +49,7 @@ rake integration_test
 
 ### Unit Tests
 ```
-rake integration_test
+rake unit_test
 ```
 
 Contributing

@@ -3,25 +3,23 @@ require_relative '../../../../lib/translators/free_google/extractor'
 
 ##
 # Tests for {FreeGoogle::Extractor}
-
 class ExtractorTest < Test::Unit::TestCase
-
   def setup
     @translation_extractor = FreeGoogle::Extractor.new
   end
 
   def test_it_should_return_empty_string
-    assert_equal "", @translation_extractor.extract("")
-    assert_equal "", @translation_extractor.extract(nil)
+    assert_equal '', @translation_extractor.extract('')
+    assert_equal '', @translation_extractor.extract(nil)
   end
 
   def test_it_should_return_only_the_translation_text
     # given
     rawdata = '[["translation","original",,,10]'
-    expected = "translation"
+    expected = 'translation'
 
     # when
-    result =  @translation_extractor.extract(rawdata)
+    result = @translation_extractor.extract(rawdata)
 
     # then
     assert_equal expected, result
@@ -30,10 +28,10 @@ class ExtractorTest < Test::Unit::TestCase
   def test_it_should_ignore_inside_quotes
     # given
     rawdata = '[["translation\'s","original",,,10]'
-    expected = "translation\'s"
+    expected = 'translation\'s'
 
     # when
-    result =  @translation_extractor.extract(rawdata)
+    result = @translation_extractor.extract(rawdata)
 
     # then
     assert_equal expected, result
@@ -45,7 +43,7 @@ class ExtractorTest < Test::Unit::TestCase
     expected = 'this has it "", bla bla'
 
     # when
-    result =  @translation_extractor.extract(rawdata)
+    result = @translation_extractor.extract(rawdata)
 
     # then
     assert_equal expected, result
