@@ -1,53 +1,53 @@
 Rufregle
 -----
-[![Version](http://img.shields.io/gem/v/rufregle.svg)](https://rubygems.org/gems/rufregle)[![Build Status](https://travis-ci.org/CristianOliveiraDaRosa/rufregle.svg)](https://travis-ci.org/CristianOliveiraDaRosa/rufregle)
+[![Version](http://img.shields.io/gem/v/rufregle.svg)](https://rubygems.org/gems/rufregle) [![Build Status](https://travis-ci.org/CristianOliveiraDaRosa/rufregle.svg)](https://travis-ci.org/CristianOliveiraDaRosa/rufregle) [![Code Climate](https://codeclimate.com/github/CristianOliveiraDaRosa/rufregle/badges/gpa.svg)](https://codeclimate.com/github/CristianOliveiraDaRosa/rufregle)
 
 Ruby Free Google Translate gem or Rufregle
 
 Simple unofficial free google translate library.
 
-#How it works?
+# How it works?
 
 It uses an alternative google url to request the translate that's why this lib may have performance issues.
-Recommended to use only in prototypes applications.
+**Recommended to use in prototypes applications.**
 
-###Is it free?
+### Is it free?
 
 Yes.
 
-###Should I use it in my Production Application?
+### Should I use it in my Production Application?
 
 Maybe. You need performance?
 
 
-#Using
+# Using
 More simple than that?
 
 Installing gem
-```
-$  gem install rufregle
+```bash
+ gem install rufregle
 
 ```
 
 Using on code:
-```
+```ruby
 result = Rufregle.new.translate("Hello World", "en", "pt")
-p "#{result[:translated]}"
+puts result[:translated]
 ```
 
 # Tests
 Runing all tests
 
 ```
-rake test
+rake all_test
 ```
 
-### Integration
+#### Integration
 ```
 rake integration_test
 ```
 
-### Unit Tests
+#### Unit Tests
 ```
 rake unit_test
 ```
