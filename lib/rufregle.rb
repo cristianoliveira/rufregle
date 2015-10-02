@@ -1,4 +1,4 @@
-require_relative 'translators/free_google/factory'
+require_relative 'translators/free_google/free_google_translator'
 ##
 # Rufregle is a client api for translations
 # it uses as default {FreeGoogle::Translator}
@@ -8,7 +8,7 @@ class Rufregle
   FAIL = 'Rufregle: All params must be informed'
 
   def initialize
-    @translator = FreeGoogle::Factory.create
+    @translator = FreeGoogleTranslator.new
   end
 
   ##

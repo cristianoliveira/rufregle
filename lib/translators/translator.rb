@@ -1,6 +1,6 @@
 ##
 # A Blueprint of how a Translator class must be.
-class Translator
+module Translator
   ##
   # Return a translated text of a given +text+ +from+ language +to+
   # another language
@@ -8,9 +8,15 @@ class Translator
   # @param text [String] text to be translated.
   # @param from [String] language from
   # @param to [String] language to
-  # @return [String] translated text
+  # @return [Hash] translated and original text
+  #      Example:
+  #         input "hi", :en, :pt
+  #         output {translated: "ola", original: "hi"}
+  #
+  def translate(text_to_translate, from, to)
+    data = request(text_to_translate, from, to)
+    translation = extract(data)
 
-  def translate(_text, _from, _to)
-    fail 'Method do_translate must be implemented'
+    {translated: translation, original: text_to_translate}
   end
 end

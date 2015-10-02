@@ -2,7 +2,7 @@
 # encoding: utf-8
 require 'test/unit'
 require_relative '../../lib/rufregle.rb'
-require_relative '../../lib/translators/free_google/factory.rb'
+require_relative '../../lib/translators/free_google/free_google_translator.rb'
 
 class RufregleTest < Test::Unit::TestCase
   def test_english_to_portuguese_hello
@@ -45,7 +45,7 @@ class RufregleTest < Test::Unit::TestCase
     # given
     phrase = 'Isso é uma frase traduzida'
     expected = 'This is a translated phrase'
-    translator = FreeGoogle::Factory.create()
+    translator = FreeGoogleTranslator.new
     rufregle = Rufregle.new
 
     # when
