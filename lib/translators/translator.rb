@@ -17,6 +17,6 @@ module Translator
     data = request(text_to_translate, from, to)
     translation = extract(data)
 
-    {translated: translation, original: text_to_translate}
+    { translated: translation, original: text_to_translate }
   end
 end

@@ -8,7 +8,7 @@ require_relative '../translator'
 class FreeGoogleTranslator
   include Translator
 
-  ENCODE = "UTF-8"
+  ENCODE = 'UTF-8'
   GOOGLE_URL_API = 'https://translate.google.com/translate_a/'
   GOOGLE_PARAMS = 'single?client=z&sl=%s&tl=%s-CN&ie=UTF-8&oe=UTF-8'\
                   '&dt=t&dt=rm&q=%s'
