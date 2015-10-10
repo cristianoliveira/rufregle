@@ -1,3 +1,5 @@
+require_relative 'requester'
+
 ##
 # A Blueprint of how a Translator class must be.
 module Translator
@@ -13,10 +15,16 @@ module Translator
   #         input "hi", :en, :pt
   #         output {translated: "ola", original: "hi"}
   #
-  def translate(text_to_translate, from, to)
-    data = request(text_to_translate, from, to)
+  def translate(text, from, to)
+    data = requester.request(api_url, params(text, from, to))
     translation = extract(data)
 
     { translated: translation, original: text_to_translate }
+  end
+
+  private
+
+  def requester
+    Requester.new
   end
 end

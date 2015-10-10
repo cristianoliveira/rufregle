@@ -23,7 +23,7 @@ class Rufregle
   #     { translated: "Ola mundo", original: "Hello word" }
   def translate(text, from, to)
     return FAIL unless all_present?([text, from, to])
-    @translator.translate(text, from, to)
+    translator.translate(text, from, to)
   end
 
   private
