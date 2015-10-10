@@ -7,8 +7,7 @@ require_relative '../translator'
 ##
 # Implementation of Translator using alternative URL API to
 # request translations
-class FreeGoogleTranslator
-  include Translator
+class FreeGoogleTranslator < Translator
   ENCODE = 'UTF-8'
 
   def api_url
@@ -29,6 +28,6 @@ class FreeGoogleTranslator
   private
 
   def extract(data)
-    Extract.new.extract(data)
+    Extract.extract(data)
   end
 end

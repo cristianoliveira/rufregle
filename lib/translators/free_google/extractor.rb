@@ -1,6 +1,6 @@
 ##
 # Extract translation from raw data.
-class Extractor
+module Extractor
   ENCODE = 'UTF-8'
 
   ##
@@ -11,7 +11,7 @@ class Extractor
   #   Example of how raw data look like:
   #   [[["Ola","Hello",,,10]],,"en"]
   #
-  def extract(rawdata)
+  def self.extract(rawdata)
     return '' if rawdata.nil? || rawdata.empty?
 
     encoded = rawdata.force_encoding(ENCODE)

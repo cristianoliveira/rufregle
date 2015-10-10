@@ -4,13 +4,10 @@ require_relative '../../../../lib/translators/free_google/extractor'
 ##
 # Tests for {FreeGoogle::Extractor}
 class ExtractorTest < Test::Unit::TestCase
-  def setup
-    @extractor = Extractor.new
-  end
 
   def test_it_should_return_empty_string
-    assert_equal '', @extractor.extract('')
-    assert_equal '', @extractor.extract(nil)
+    assert_equal '', Extractor.extract('')
+    assert_equal '', Extractor.extract(nil)
   end
 
   def test_it_should_return_only_the_translation_text
@@ -19,7 +16,7 @@ class ExtractorTest < Test::Unit::TestCase
     expected = 'translation'
 
     # when
-    result = @extractor.extract(rawdata)
+    result = Extractor.extract(rawdata)
 
     # then
     assert_equal expected, result
@@ -31,7 +28,7 @@ class ExtractorTest < Test::Unit::TestCase
     expected = 'translation\'s'
 
     # when
-    result = @extractor.extract(rawdata)
+    result = Extractor.extract(rawdata)
 
     # then
     assert_equal expected, result
@@ -43,7 +40,7 @@ class ExtractorTest < Test::Unit::TestCase
     expected = 'this has it "", bla bla'
 
     # when
-    result = @extractor.extract(rawdata)
+    result = Extractor.extract(rawdata)
 
     # then
     assert_equal expected, result
