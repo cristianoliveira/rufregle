@@ -7,10 +7,6 @@ class Rufregle
 
   FAIL = 'Rufregle: All params must be informed'
 
-  def initialize
-    @translator = FreeGoogleTranslator.new
-  end
-
   ##
   # Return a translated text of a given +text+ +from+ language +to+ another
   # language
@@ -35,5 +31,9 @@ class Rufregle
   def all_present?(params)
     params.each { |val| return false if val.nil? || val.empty? }
     true
+  end
+
+  def translator
+    @translator || FreeGoogleTranslator.new
   end
 end
