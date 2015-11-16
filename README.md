@@ -1,6 +1,6 @@
 Rufregle
 -----
-[![Version](http://img.shields.io/gem/v/rufregle.svg)](https://rubygems.org/gems/rufregle) [![Build Status](https://travis-ci.org/CristianOliveiraDaRosa/rufregle.svg)](https://travis-ci.org/CristianOliveiraDaRosa/rufregle) [![Code Climate](https://codeclimate.com/github/CristianOliveiraDaRosa/rufregle/badges/gpa.svg)](https://codeclimate.com/github/CristianOliveiraDaRosa/rufregle)
+[![Version](http://img.shields.io/gem/v/rufregle.svg)](https://rubygems.org/gems/rufregle) [![Build Status](https://travis-ci.org/CristianOliveiraDaRosa/rufregle.svg)](https://travis-ci.org/CristianOliveiraDaRosa/rufregle) [![Code Climate](https://codeclimate.com/github/cristianoliveira/rufregle/badges/gpa.svg)](https://codeclimate.com/github/cristianoliveira/rufregle)
 
 Ruby Free Google Translate gem or Rufregle
 
